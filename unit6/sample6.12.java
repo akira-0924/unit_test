@@ -1,3 +1,5 @@
+// ------------------------------------------
+
 public class FileContent
 {
   public readonly string FileName;
@@ -10,6 +12,8 @@ public class FileContent
   }
 }
 
+// ------------------------------------------
+
 public class FileUpdate
 {
   public readonly string FileName;
@@ -21,6 +25,26 @@ public class FileUpdate
     NewContent = content;
   }
 }
+
+// ------------------------------------------
+public class Persister
+{
+  public FIleContent[] ReadDirectory(string directoryName)
+  {
+    return Directory
+    .GetFiles(directoryName)
+    .Select(x => new FileContent(Path.GetFileName(x), File.ReadAllLines(x)))
+    .ToArray();
+  }
+
+  public void ApplyUpdate(string directoryName, FileUpdate update)
+  {
+     string filePath = Path.Combine(directoryName, update.FileName);
+     File.WriteAllText(filePath, update.NewContent);
+  }
+}
+
+// ------------------------------------------
 
 public class AuditManager
 {
