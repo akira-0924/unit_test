@@ -161,3 +161,5 @@ public int Increment()
 ![alt text](<スクリーンショット 2025-01-12 19.17.51.png>)
 
 [sample code](./sample6.8.java)
+
+↑ の状態は AuditManager クラスはファイルシステムと深く結びついているため、そのままテストすることは簡単ではない。
