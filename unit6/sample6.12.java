@@ -1,9 +1,25 @@
-// インタフェースを作成
-public interface IFileSystem
+public class FileContent
 {
-  string[] GetFiles(string directoryName);
-  void WriteAllText(string filePath, string content);
-  List<string> ReadAllLines(string filePath);
+  public readonly string FileName;
+  public readonly string[] Lines;
+
+  public FileContent(string name, string[] lines)
+  {
+    FileName = name;
+    Lines = lines;
+  }
+}
+
+public class FileUpdate
+{
+  public readonly string FileName;
+  public readonly string NewContent;
+
+  public FileUpdate(string name, string content)
+  {
+    FileName = name;
+    NewContent = content;
+  }
 }
 
 public class AuditManager
