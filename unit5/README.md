@@ -134,3 +134,8 @@ https://qiita.com/cocoa-maemae/items/b08c4cf95d47e314e2dc
    [test code](./sample5.8.java)
 
 この例ではシステム内のコミュニケーションとシステム外のコミュニケーションの両方がある。
+
+- システム外
+  - CustomerController クラスと外部アプリケーション(メール)とで行われるコミュニケーション
+- システム内
+  - Customer クラスと Store クラスとで行われるコミュニケーション
