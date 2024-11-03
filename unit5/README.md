@@ -110,4 +110,5 @@ API は`private`キーワードがあるためわかりやすいが、振る舞�
 
 https://qiita.com/cocoa-maemae/items/b08c4cf95d47e314e2dc
 
-ドメイン層とアプリケーション層の分離
+- ドメイン層とアプリケーション層の分離
+  - ドメイン層はドメイン知識(how-to),アプリケーション層は(what-to)
