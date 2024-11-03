@@ -105,3 +105,7 @@ API は`private`キーワードがあるためわかりやすいが、振る舞�
 このクライアントが達成したいことは「MessageRenderer クラスに渡したメッセージが埋め込まれた HTML を描画させること」つまり目的は、`Render`メソッドだけにある。
 
 ## モックの利用とテストの壊れやすさ
+
+### ヘキサゴナルアーキテクチャ
+
+https://qiita.com/cocoa-maemae/items/b08c4cf95d47e314e2dc
