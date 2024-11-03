@@ -109,3 +109,5 @@ API は`private`キーワードがあるためわかりやすいが、振る舞�
 ### ヘキサゴナルアーキテクチャ
 
 https://qiita.com/cocoa-maemae/items/b08c4cf95d47e314e2dc
+
+ドメイン層とアプリケーション層の分離
