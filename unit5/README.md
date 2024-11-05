@@ -131,3 +131,4 @@ https://qiita.com/cocoa-maemae/items/b08c4cf95d47e314e2dc
 3. 店にある商品の数を減らす
 4. 領収書(Receipt)を顧客にメールで送る
 5. 購入処理が成功したことを呼び出し元に伝える
+   [test code](./sample5.8.java)
