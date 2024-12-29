@@ -15,7 +15,7 @@ public void purchase_success_when_enough_inventory() {
 
   // 確認(Assert)
   Assert.True(success);
-  storeMock.Verify(x => x.HasEnoughInventory(Product.shampoo, 5), Times.Once);
+  storeMock.Verify(x => x.RemoveInventory(Product.shampoo, 5), Times.Once);
 }
 
 [Fact]
