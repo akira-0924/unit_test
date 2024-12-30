@@ -17,3 +17,13 @@ public class Calculator {
     }
 }
 ```
+
+```
+public class CalculatorTest {
+    [Fact]
+    public void testSum() {
+        Calculator calculator = new Calculator();
+        assertEquals(3, calculator.Sum(1, 2));
+    }
+}
+```
