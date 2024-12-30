@@ -7,3 +7,13 @@
 - Arrange（準備）
 - Act（実行）
 - Assert（検証）
+
+例）
+
+```
+public class Calculator {
+    public double Sum(double first, double second) {
+        return first + second;
+    }
+}
+```
