@@ -24,8 +24,16 @@ public class CalculatorTest {
     [Fact]
     <!-- テストケースの名前 -->
     public void Sum_of_two_numbers() {
-        Calculator calculator = new Calculator();
-        assertEquals(3, calculator.Sum(1, 2));
+        // Arrange
+        double first = 10;
+        double second = 20;
+        var calculator = new Calculator();
+
+        // Act
+        double result = calculator.Sum(first, second);
+
+        // Assert
+        Assert.Equal(3, result);
     }
 }
 ```
