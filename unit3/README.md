@@ -20,8 +20,10 @@ public class Calculator {
 
 ```
 public class CalculatorTest {
+  <!-- テストケースであることを示すxUnitの属性 -->
     [Fact]
-    public void testSum() {
+    <!-- テストケースの名前 -->
+    public void Sum_of_two_numbers() {
         Calculator calculator = new Calculator();
         assertEquals(3, calculator.Sum(1, 2));
     }
