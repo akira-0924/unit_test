@@ -30,3 +30,4 @@ public class CustomerTests
     Assert.Equal(10, _store.GetInventory(Product.Shampoo));
   }
 }
+
