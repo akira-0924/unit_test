@@ -173,3 +173,20 @@ public void Delivery_with_a_past_date_is_invalid();
 ```
 
 このように命名することで、テストケースの目的が明確になり、テストケースの可読性が高くなる。
+
+## パラメータ化テストのリファクタリング
+
+通常、1 つのテストケースでは 1 単位の振る舞いを完全に表現することはできない。
+例えば、配達の機能の場合、「指定できる配達日は注文日から 2 日後以降」となっていたとする。この機能を検証するためには、過去の日付を指定したテストケースと当日、翌日、翌々日のテストケースを作成する必要がある。
+
+```
+<!-- 当日の配達は不正である -->
+public void Delivery_for_today_is_invalid();
+<!-- 翌日の配達は不正である -->
+public void Delivery_for_tomorrow_is_valid();
+<!-- 最短の配達日は 2 日後である -->
+public void The_soonest_date_is_two_days_from_now();
+```
+
+これらをまとめたテストケースは以下のようになる。
+[test code](./sample3.11.java)
