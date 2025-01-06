@@ -123,3 +123,30 @@ public void Sum_TwoNumbers_ReturnSum();
 <!-- 2つの数値の合計 -->
 public void Sum_of_two_numbers();
 ```
+
+### 命名の指針
+
+- 厳格な命名規則に縛られないようにする
+- 問題領域のことに精通している非開発者に対してどのような検証をするのかが伝わるようにする
+- \_を使って区切る
+
+例）配達サービス(delivery service)の場合に、過去の日付は選択できないことを検証するテストメソッド
+
+```
+<!-- IsDeliveryValid_不正な日付_Falseを返す -->
+public void IsDeliveryValid_InvalidDate_ReturnsFalse();
+```
+
+厳格な命名規則に縛れてしまっているためわかりにくくなっている。これを普通の言い回しに書き換える。
+
+```
+<!-- 不正な日付が指定された配達は不正だと見做されるべきである -->
+public void Delivery_with_invalid_date_should_be_considered_invalid();
+```
+
+「配達日が不正」がが正確にはどういう意味かが明確ではないので、書き換える。
+
+```
+<!-- 過去の日付が指定された配達は不正だと見做されるべきである -->
+public void Delivery_with_past_date_should_be_considered_invalid();
+```
