@@ -190,3 +190,4 @@ public void The_soonest_date_is_two_days_from_now();
 
 これらをまとめたテストケースは以下のようになる。
 [test code](./sample3.11.java)
+このリファクタリングは、コード量と可読性がトレードオフの関係にあるので、バランスが大事。正常系と異常系はわけたほうがいい。
