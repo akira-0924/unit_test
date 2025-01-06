@@ -150,3 +150,26 @@ public void Delivery_with_invalid_date_should_be_considered_invalid();
 <!-- 過去の日付が指定された配達は不正だと見做されるべきである -->
 public void Delivery_with_past_date_should_be_considered_invalid();
 ```
+
+冗長なので「consider」を取り除く。
+
+```
+<!-- 過去の日付が指定された配達は不正とすべきである -->
+public void Delivery_with_past_date_should_be_invalid();
+```
+
+「Should be」はアンチパターン。希望や要望は含めてはならない。「is」に変える。
+
+```
+<!-- 過去の日付が指定された配達は不正でである -->
+public void Delivery_with_past_date_is_invalid();
+```
+
+文法を正しくする。
+
+```
+<!-- 過去の日付が指定された配達は不正である -->
+public void Delivery_with_a_past_date_is_invalid();
+```
+
+このように命名することで、テストケースの目的が明確になり、テストケースの可読性が高くなる。
