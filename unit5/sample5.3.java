@@ -1,14 +1,15 @@
-// レポートを作成する
+// 在庫が十分にないときは購入に失敗する
 [Fact]
-public void Creating_a_report()
+public void Purchase_fails_when_not_enough_inventory()
 {
-  var stub = new Mock<IDatabase>();
-  stub.Setup(x => x.GetNumberOfUsers()).Returns(10);
-  var sut = new Controller(stub.Object);
+  var storeMock = new Mock<IStore>();
+  // 呼びされたときに返す結果を事前に準備しておく
+  storeMock.Setup(x => x.HasEnoughInventory(Product.Shampoo, 5)).Returns(false);
+  var sut = new Customer(storeMock.Object);
 
-  Report report = sut.CreateReport();
+  bool success = sut.Purchase(storeMock.Object, Product.Shampoo, 5);
 
-  Assert.Equal(10, report.NumberOfUsers);
-  // スタブとのコミュニケーションを検証してしまっている
-  stub.Verify(x => x.GetNumberOfUsers(), Times.Once);
+  Assert.False(success);
+  // テスト対象システムからの呼び出しを検証する
+  storeMock.Verify(x => x.RemoveInventory(Product.Shampoo, 5), Times.Never);
 }
