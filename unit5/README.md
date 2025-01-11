@@ -46,11 +46,13 @@ Mock への呼びだしは、異なるメソッドに対して行われている
 例）
 
 ```
+<!-- メールを送るという副作用 -->
 var mock = new Mock<IEmailGateway>();
 mock.Verify(x => x.SendEmail("user@email.com");
 ```
 
 ```
+<!-- データベースに対して変更はなく、データを取得するだけのクエリ -->
 var stub = new Stub<IDatabase>();
 stub.Setup(x => x.GetNumberOfUsers()).Returns(10);
 ```
