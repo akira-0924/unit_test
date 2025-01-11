@@ -56,3 +56,12 @@ mock.Verify(x => x.SendEmail("user@email.com");
 var stub = new Stub<IDatabase>();
 stub.Setup(x => x.GetNumberOfUsers()).Returns(10);
 ```
+
+## 観察可能な振る舞い(Observable Behavior)と実装の詳細(Implementation Details)
+
+### 観察可能な振る舞いと公開された API との違い
+
+全てのプロダクションコードは以下の 2 つの観点で分類できる
+
+- 公開された API なのか、それとも、プライベート API なのか
+- 観察可能な振る舞いなのか、それとも、実装の詳細なのか
