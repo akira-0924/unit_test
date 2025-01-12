@@ -9,7 +9,7 @@ public static bool isStringLong(string input)
 }
 
 public void Test()
-// falseの場合のテストコードだけなので、分岐経路は1つ
+// falseの場合のテストコードだけなので、分岐経路は1つになる
 {
   bool result = isStringLong("abc");
   Assert.Eq(result, false); ←ここでは2つ目の結果を検証している

@@ -140,5 +140,5 @@ https://qiita.com/cocoa-maemae/items/b08c4cf95d47e314e2dc
 - システム内
   - Customer クラスと Store クラスとで行われるコミュニケーション
 
-これを mock を使った書き方に置き換える
+これを mock を使った書き方に置き換えると ↓
 [test code](./sample5.9.java)
