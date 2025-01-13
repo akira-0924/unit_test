@@ -173,3 +173,7 @@ public int Increment()
 [sample code](./sample6.9.java)
 
 これで`AuditManager`とファイルシステムを分離できたので共有依存であったファイルシステムは複数のテストケース間で共有されることはなくなる。
+
+よって、モックを使用した改善 ver のコードが以下となる。
+
+[sample code](./sample6.11.java)
