@@ -1,3 +1,11 @@
+// インタフェースを作成
+public interface IFileSystem
+{
+  string[] GetFiles(string directoryName);
+  void WriteAllText(string filePath, string content);
+  List<string> ReadAllLines(string filePath);
+}
+
 public class AuditManager
 {
   private readonly int _maxEntriesPerFile;
