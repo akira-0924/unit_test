@@ -25,7 +25,20 @@ public class User {
 
      if(Type == newType)
      {
-      int delta = newType == UserType.Employ
+      int delta = newType == UserType.Employee ? 1 : -1;
+      Database.saveCompany(newNumber);
      }
+
+     Email = newEmail;
+     Type = newType;
+
+    //  ユーザー情報をデータベースに保存する
+     Database.saveUser(this);
+     MessageBus.sendEmailChangedMessage(UserId, newEmail);
   }
+}
+
+public enum UserType {
+  Customer = 1,
+  Employee = 2,
 }
